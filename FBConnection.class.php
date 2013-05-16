@@ -93,7 +93,7 @@ class FBConnection
             $this->db->Connect($dbUser, $dbPassword, $dbRole, $dbName, $dbCharset, $dbPages);
         } else
         {
-            $this->db->Connect($dbUser, $dbPassword, $dbRole, $dbName, $dbCharset, $dbPages);
+            $this->db->PConnect($dbUser, $dbPassword, $dbRole, $dbName, $dbCharset, $dbPages);
         }
     }
 
