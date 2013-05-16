@@ -142,7 +142,7 @@ class FBQuery
     {
         if (!$this->qrIsPrepared)
         {
-            $this->qrStatementHandle = ibase_prepare($this->dbHandle, $this->trHandle, $this->qrSQLText);
+            $this->qrStatementHandle = @ibase_prepare($this->dbHandle, $this->trHandle, $this->qrSQLText);
             if (FALSE == $this->qrStatementHandle)
             {
                 throw new Exception(ibase_errmsg(), ibase_errcode());
