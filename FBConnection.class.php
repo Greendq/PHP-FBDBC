@@ -88,7 +88,8 @@ class FBConnection
     public function Connect($dbUser, $dbPassword, $dbRole, $dbName, $dbCharset = "utf8", $dbPages = 10000, $usePool = false)
     {
         // connect to database
-        if (true === $usePool)
+        error_log("Use pool: ".(bool)$usePool, 0);
+        if (!(bool)$usePool)
         {
             $this->db->Connect($dbUser, $dbPassword, $dbRole, $dbName, $dbCharset, $dbPages);
         } else
